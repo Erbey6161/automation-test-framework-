@@ -1,4 +1,4 @@
-# 🧪 Automation Test Framework
+## 🔥 Automation QA Framework Project
 
 This project is an automation testing framework built using:
 
@@ -19,6 +19,22 @@ This project is an automation testing framework built using:
 - Detailed HTML reporting with Extent Reports
 
 ---
+## 🧪 Test Scenarios
+
+- Login with valid credentials
+- Add product to cart
+- Verify cart functionality
+
+---
+
+## 🛠 Technologies Used
+
+| Tool | Purpose |
+|------|--------|
+| Selenium | UI Automation |
+| TestNG | Test Management |
+| Maven | Dependency Management |
+| Extent Reports | Reporting |
 
 ## 📁 Project Structure
 
@@ -46,6 +62,7 @@ src
 After test execution, reports are generated under:
 
 test-output/ExtentReport.html
+![Report Screenshot](report.png)
 
 ---
 
