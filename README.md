@@ -1,70 +1,60 @@
-## 🔥 Automation QA Framework Project
+# 🚀 Selenium TestNG Automation Framework
 
-This project is an automation testing framework built using:
-
+## 📌 Project Description
+This project is a test automation framework built using:
 - Java
 - Selenium WebDriver
 - TestNG
-- Page Object Model (POM)
-- Extent Reports
-- ConfigReader (Properties)
+- Maven
+
+It follows Page Object Model (POM) design pattern and includes:
+- Retry mechanism
+- Screenshot on failure
+- Clean BasePage structure
 
 ---
 
-## 🚀 Features
-
-- Automated login and cart test scenarios
-- Config-based test data management
-- Reusable Page Object structure
-- Detailed HTML reporting with Extent Reports
-
----
-## 🧪 Test Scenarios
-
-- Login with valid credentials
-- Add product to cart
-- Verify cart functionality
+## 🧱 Tech Stack
+- Java 17
+- Selenium 4
+- TestNG
+- Maven
 
 ---
 
-## 🛠 Technologies Used
-
-| Tool | Purpose |
-|------|--------|
-| Selenium | UI Automation |
-| TestNG | Test Management |
-| Maven | Dependency Management |
-| Extent Reports | Reporting |
-
-## 📁 Project Structure
-
-src
- ├── test
- │   ├── java
- │   │   ├── tests
- │   │   ├── pages
- │   │   └── utils
- │   └── resources
- │       └── config.properties
+## 📂 Project Structure
+- base → test setup
+- pages → page objects
+- tests → test cases
+- utils → helper classes
 
 ---
 
-## ▶️ How to Run
+## ▶️ How to Run Tests
 
-1. Clone the repository
-2. Open in IntelliJ IDEA
-3. Run TestNG tests
+```bash
+mvn clean test or run via IntelliJ (right click → Run)
+---
+## 📸 Features
+
+✅ Page Object Model (POM)
+🔁 Retry failed tests
+📸 Screenshot on failure
+⚙️ Maven build support
 
 ---
-
-## 📊 Reporting
-
-After test execution, reports are generated under:
-
-test-output/ExtentReport.html
-![Report Screenshot](report.png)
+## 🧪 Sample Test
+- Login Test
+- Add to Cart Test
+- Checkout Test
 
 ---
+## 📈 Future Improvements
+- Parallel execution
+- CI/CD (Jenkins)
+- Reporting (ExtentReports)
+
+
 
 ## 👨‍💻 Author
 
