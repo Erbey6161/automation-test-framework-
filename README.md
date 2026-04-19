@@ -31,6 +31,32 @@ It follows Page Object Model (POM) design pattern and includes:
 ---
 
 ▶️ How to Run Tests
+mvn clean test or run via IntelliJ (right click → Run)
+---
+📸 Features
+
+✅ Page Object Model (POM)
+🔁 Retry failed tests
+📸 Screenshot on failure
+⚙️ Maven build support
+
+---
+ 🧪 Sample Test
+- Login Test
+- Add to Cart Test
+- Checkout Test
+
+---
+📈 Future Improvements
+- Parallel execution
+- CI/CD (Jenkins)
+- Reporting (ExtentReports)
+
+
+
+👨‍💻 Author
+
+Eren Bodur
 
 ```bash
 mvn clean test or run via IntelliJ (right click → Run)
