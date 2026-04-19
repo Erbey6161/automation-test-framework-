@@ -13,6 +13,22 @@ It follows Page Object Model (POM) design pattern and includes:
 - Clean BasePage structure
 
 ---
+selenium-testng-framework/
+│
+├── pom.xml
+├── README.md
+├── testng.xml
+├── .gitignore
+│
+├── src
+│   └── test
+│       └── java
+│           ├── base
+│           ├── pages
+│           ├── tests
+│           └── utils
+│
+└── test-output (gitignore!)
 
 ## 🧱 Tech Stack
 - Java 17
