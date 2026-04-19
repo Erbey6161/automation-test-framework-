@@ -5,24 +5,19 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    private static Properties properties;
+    private static Properties prop;
 
     static {
         try {
-            properties = new Properties();
-
-            FileInputStream file = new FileInputStream(
-                    System.getProperty("user.dir") + "/src/test/resources/config.properties"
-            );
-
-            properties.load(file);
-
+            FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+            prop = new Properties();
+            prop.load(fis);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static String get(String key) {
-        return properties.getProperty(key);
+    public static String getProperty(String key) {
+        return prop.getProperty(key);
     }
 }

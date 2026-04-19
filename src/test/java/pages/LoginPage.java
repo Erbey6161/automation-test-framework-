@@ -7,23 +7,14 @@ public class LoginPage {
 
     WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver){
         this.driver = driver;
     }
 
-    By username = By.id("user-name");
-    By password = By.id("password");
-    By loginBtn = By.id("login-button");
+    public void login(String username, String password){
 
-    public void enterUsername(String user) {
-        driver.findElement(username).sendKeys(user);
-    }
-
-    public void enterPassword(String pass) {
-        driver.findElement(password).sendKeys(pass);
-    }
-
-    public void clickLogin() {
-        driver.findElement(loginBtn).click();
+        driver.findElement(By.id("user-name")).sendKeys(username);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("login-button")).click();
     }
 }

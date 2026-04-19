@@ -1,40 +1,19 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
-import pages.LoginPage;
-import utils.ConfigReader;
+import base.BaseTest;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import utils.DriverFactory;
 
-import java.time.Duration;
-
-public class LoginTest {
-
-    WebDriver driver;
-    LoginPage loginPage;
-
-    @BeforeMethod
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage(driver);
-    }
+public class LoginTest extends BaseTest {
 
     @Test
-    public void testLogin() {
+    public void openGoogle() {
 
-        loginPage.enterUsername(ConfigReader.get("username"));
-        loginPage.enterPassword(ConfigReader.get("password"));
-        loginPage.clickLogin();
+        DriverFactory.getDriver().get("https://www.google.com");
 
-        assert driver.getCurrentUrl().contains("inventory");
-    }
+        String title = DriverFactory.getDriver().getTitle();
 
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
+        Assert.assertTrue(title.contains("Google"));
     }
 }

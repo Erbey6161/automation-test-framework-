@@ -1,24 +1,23 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class InventoryPage {
-
-    WebDriver driver;
+public class InventoryPage extends BasePage {
 
     public InventoryPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
-    By addToCartBtn = By.id("add-to-cart-sauce-labs-backpack");
-    By cartIcon = By.className("shopping_cart_link");
+    private By addToCartBtn = By.cssSelector(".inventory_item button");
+    private By cartIcon = By.className("shopping_cart_link");
 
-    public void addProductToCart() {
-        driver.findElement(addToCartBtn).click();
+    public void addFirstProductToCart() {
+        click(addToCartBtn);
     }
 
     public void goToCart() {
-        driver.findElement(cartIcon).click();
+        click(cartIcon);
     }
 }
